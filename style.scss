@@ -4,3 +4,14 @@
     font-family: Roboto;
   }
 }
+header {
+  display: flex;
+  justify-content: center;
+}
+.titre-nav {
+  display: flex;
+  justify-content: center;
+}
+.bord-carte {
+  border-radius: 10px;
+}
