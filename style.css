@@ -1,1 +1,7 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@media (max-width: 768px) {
+  html,
+  body {
+    font-family: Roboto;
+  }
+}
+/*# sourceMappingURL=style.css.map */
