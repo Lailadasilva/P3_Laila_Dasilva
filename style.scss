@@ -3,15 +3,27 @@
   body {
     font-family: Roboto;
   }
-}
-header {
-  display: flex;
-  justify-content: center;
-}
-.titre-nav {
-  display: flex;
-  justify-content: center;
-}
-.bord-carte {
-  border-radius: 10px;
+  header {
+    display: flex;
+    justify-content: center;
+  }
+
+  %flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .flex-center-colomn {
+    @extend %flex-center;
+    flex-direction: column;
+  }
+  .flex-center-row {
+    @extend %flex-center;
+
+    flex-direction: row;
+  }
+
+  .border {
+    border-radius: 10px;
+  }
 }
