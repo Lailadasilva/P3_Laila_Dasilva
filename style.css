@@ -2,16 +2,22 @@
   html,
   body {
     font-family: Roboto;
+    margin: 0;
+    padding: 0;
   }
   header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    padding: 0, 5em;
+    background-color: white;
+    border-bottom: 1px solid;
+    -webkit-box-shadow: 0 1px #eee;
+            box-shadow: 0 1px #eee;
+    height: 3em;
   }
-  .flex-center-colomn, .flex-center-row {
+  img {
+    width: 150px;
+    height: 30px;
+  }
+  header, .flex-center-colomn, .flex-center-row {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

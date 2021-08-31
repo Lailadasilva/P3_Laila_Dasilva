@@ -2,10 +2,20 @@
   html,
   body {
     font-family: Roboto;
+    margin: 0;
+    padding: 0;
   }
   header {
-    display: flex;
-    justify-content: center;
+    @extend %flex-center;
+    padding: 0, 5em;
+    background-color: white;
+    border-bottom: 1px solid;
+    box-shadow: 0 1px #eee;
+    height: 3em;
+  }
+  & img {
+    width: 150px;
+    height: 30px;
   }
 
   %flex-center {
