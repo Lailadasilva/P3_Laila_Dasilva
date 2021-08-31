@@ -5,25 +5,7 @@
     margin: 0;
     padding: 0;
   }
-  header {
-    @extend %flex-center;
-    padding: 0, 5em;
-    background-color: white;
-    border-bottom: 1px solid;
-    box-shadow: 0 1px #eee;
-    height: 3em;
-  }
-  & img {
-    width: 150px;
-    height: 30px;
-  }
-
-  %flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .flex-center-colomn {
+  .flex-center-column {
     @extend %flex-center;
     flex-direction: column;
   }
@@ -31,6 +13,30 @@
     @extend %flex-center;
 
     flex-direction: row;
+  }
+
+  header {
+    @extend %flex-center;
+    padding: 0, 5em;
+    background-color: white;
+    border-bottom: 1px solid;
+    box-shadow: 0 1px #eee; // ne fonctionne pas, à fixer
+    height: 3em;
+    & img {
+      width: 150px;
+      height: 30px;
+    }
+  }
+  nav {
+    @extend .flex-center-row;
+    background-color: #eee;
+    gap: 1em;
+  }
+
+  %flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .border {
