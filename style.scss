@@ -1,4 +1,9 @@
 @media (max-width: 768px) {
+  %flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   html,
   body {
     font-family: Roboto;
@@ -29,14 +34,22 @@
   }
   nav {
     @extend .flex-center-row;
-    background-color: #eee;
+    background-color: #ddd;
     gap: 1em;
   }
-
-  %flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  h2 {
+    color: black;
+    font-size: 28px;
+  }
+  .intro {
+    @extend .flex-center-column;
+    background-color: #eee;
+    height: 285px;
+    padding: 0 2em;
+    text-align: center;
+    & p {
+      font-size: 20px;
+    }
   }
 
   .border {
