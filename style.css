@@ -57,8 +57,36 @@
   .intro p {
     font-size: 20px;
   }
-  .border {
-    border-radius: 10px;
+  .intro button {
+    padding: 1em 2em;
+    border-radius: 25px;
+    border-color: #9356dc;
+    color: #fff;
+    background: linear-gradient(170deg, #ff79da, #9356dc);
+    -webkit-box-shadow: 1px 1px 10px #aaa;
+            box-shadow: 1px 1px 10px #aaa;
   }
+  button {
+    border-radius: 15px;
+    -webkit-box-shadow: 10px #aaa;
+            box-shadow: 10px #aaa;
+  }
+  .border {
+    background-color: #eee;
+  }
+}
+
+.bord-carte {
+  border-radius: 10px;
+  background-color: #fff;
+  border-bottom: 1px solid;
+  gap: 3em;
+  height: 250px;
+}
+
+.fond {
+  background-color: #333;
+  color: #fff;
+  height: 200px;
 }
 /*# sourceMappingURL=style.css.map */
