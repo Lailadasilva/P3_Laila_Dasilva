@@ -66,27 +66,32 @@
     -webkit-box-shadow: 1px 1px 10px #aaa;
             box-shadow: 1px 1px 10px #aaa;
   }
-  button {
-    border-radius: 15px;
-    -webkit-box-shadow: 10px #aaa;
-            box-shadow: 10px #aaa;
+  div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-radius: 20px;
+    -webkit-box-shadow: 10px 10px 10px #ddd;
+            box-shadow: 10px 10px 10px #ddd;
+    border: 1px solid white;
+    gap: 5em;
+    margin: 1em;
   }
-  .border {
-    background-color: #eee;
+  img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    -webkit-box-shadow: 10px 10px 10px #ddd;
+            box-shadow: 10px 10px 10px #ddd;
+    width: 315px;
   }
-}
-
-.bord-carte {
-  border-radius: 10px;
-  background-color: #fff;
-  border-bottom: 1px solid;
-  gap: 3em;
-  height: 250px;
 }
 
 .fond {
   background-color: #333;
   color: #fff;
-  height: 200px;
 }
 /*# sourceMappingURL=style.css.map */
