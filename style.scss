@@ -22,6 +22,9 @@
 
     flex-direction: row;
   }
+  .border-shadow {
+    @extend %border-shadow;
+  }
 
   header {
     @extend %flex-center;
@@ -62,12 +65,32 @@
       box-shadow: 1px 1px 10px #aaa;
     }
   }
-  div {
-    display: flex;
-    flex-direction: column;
+  %border-shadow {
     border-radius: 20px;
     box-shadow: 10px 10px 10px #ddd;
     border: 1px solid white;
+  }
+
+  .order-helper {
+    @extend .flex-center-row;
+    @extend %border-shadow;
+    gap: 1em;
+    width: 70vw;
+    margin: 1em 0;
+    position: relative;
+
+    p:nth-child(1) {
+      position: absolute;
+      left: -4px;
+      color: white;
+      padding: 2px 6px;
+      border-radius: 20px;
+      background-color: $primary-color;
+    }
+  }
+  .border-shadow {
+    display: flex;
+    flex-direction: column;
     gap: 5em;
     margin: 1em;
   }
