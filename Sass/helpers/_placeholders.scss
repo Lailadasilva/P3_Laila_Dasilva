@@ -1,0 +1,10 @@
+%flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+%border-shadow {
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px #ddd;
+  border: 1px solid white;
+}

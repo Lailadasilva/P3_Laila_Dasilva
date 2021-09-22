@@ -1,108 +1,117 @@
-@media (max-width: 768px) {
-  $primary-color: #9356dc;
-  $secondary-color: #ff79da;
-  $tertiary-color: #99e2d0;
-  %flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  html,
-  body {
-    font-family: Roboto;
-    margin: 0;
-    padding: 0;
-  }
-  .flex-center-column {
-    @extend %flex-center;
-    flex-direction: column;
-  }
-  .flex-center-row {
-    @extend %flex-center;
+@import "./Sass/helpers/variables";
+@import "./Sass/helpers/placeholders";
+html,
+body {
+  font-family: Roboto;
+  margin: 0;
+  padding: 0;
+}
+.flex-center-column {
+  @extend %flex-center;
+  flex-direction: column;
+}
+.flex-center-row {
+  @extend %flex-center;
 
-    flex-direction: row;
-  }
-  .border-shadow {
-    @extend %border-shadow;
-  }
+  flex-direction: row;
+}
 
-  header {
-    @extend %flex-center;
-    padding: 0, 5em;
-    background-color: white;
-    border-bottom: 1px solid;
-    box-shadow: 0 1px #eee; // ne fonctionne pas, à fixer
-    height: 3em;
-    & img {
-      width: 150px;
-      height: 30px;
-    }
-  }
-  nav {
-    @extend .flex-center-row;
-    background-color: #ddd;
-    gap: 1em;
-  }
-  h2 {
-    color: black;
-    font-size: 28px;
-  }
-  .intro {
-    @extend .flex-center-column;
-    background-color: #eee;
-    height: 285px;
-    padding: 0 2em;
-    text-align: center;
-    & p {
-      font-size: 20px;
-    }
-    & button {
-      padding: 1em 2em;
-      border-radius: 25px;
-      border-color: $primary-color;
-      color: #fff;
-      background: linear-gradient(170deg, $secondary-color, $primary-color);
-      box-shadow: 1px 1px 10px #aaa;
-    }
-  }
-  %border-shadow {
-    border-radius: 20px;
-    box-shadow: 10px 10px 10px #ddd;
-    border: 1px solid white;
-  }
-
-  .order-helper {
-    @extend .flex-center-row;
-    @extend %border-shadow;
-    gap: 1em;
-    width: 70vw;
-    margin: 1em 0;
-    position: relative;
-
-    p:nth-child(1) {
-      position: absolute;
-      left: -4px;
-      color: white;
-      padding: 2px 6px;
-      border-radius: 20px;
-      background-color: $primary-color;
-    }
-  }
-  .border-shadow {
-    display: flex;
-    flex-direction: column;
-    gap: 5em;
-    margin: 1em;
-  }
-
-  img {
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    box-shadow: 10px 10px 10px #ddd;
-    width: 315px;
+header {
+  @extend %flex-center;
+  padding: 0, 5em;
+  background-color: white;
+  border-bottom: 1px solid;
+  box-shadow: 0 1px #eee; // ne fonctionne pas, à fixer
+  height: 3em;
+  & img {
+    width: 150px;
+    height: 30px;
   }
 }
+nav {
+  @extend .flex-center-row;
+  background-color: #ddd;
+  gap: 1em;
+}
+h2 {
+  color: black;
+  font-size: 28px;
+}
+.intro {
+  @extend .flex-center-column;
+  background-color: #eee;
+  height: 285px;
+  padding: 0 2em;
+  text-align: center;
+  & p {
+    font-size: 20px;
+  }
+}
+.border-shadow {
+  @extend %border-shadow;
+}
+
+.order-helper {
+  @extend .flex-center-row;
+  @extend %border-shadow;
+  gap: 1em;
+  width: 70vw;
+  margin: 1em 0;
+  position: relative;
+
+  p:nth-child(1) {
+    position: absolute;
+    left: -10px;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 20px;
+    background-color: $primary-color;
+  }
+}
+.border-shadow {
+  display: flex;
+  flex-direction: column;
+  gap: 5em;
+  margin: 1em;
+}
+
+img {
+  @extend .flex-center-column;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  flex: 2;
+  box-shadow: 10px 10px 10px #ddd;
+}
+.background {
+  background-color: #eee;
+}
+.card {
+  h2,
+  p {
+    padding: 0;
+    margin: 0;
+  }
+}
+
 .fond {
   background-color: #333;
   color: #fff;
+}
+.cards {
+  @extend .flex-center-row;
+  flex-wrap: wrap;
+  gap: 3em;
+}
+
+//*MENU 1*//
+
+.bloc {
+  border-radius: 20px;
+  background-color: white;
+  bo
+}
+.underline {
+  text-decoration-color: rgb(173, 216, 230);
+  text-decoration-line: underline;
+  text-decoration-style: solid;
 }
