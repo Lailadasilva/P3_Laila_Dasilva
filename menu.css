@@ -1,4 +1,4 @@
-.flex-center-column, .intro, img, .flex-center-row, nav, .order-helper, .cards, .flex-space-between-row, .flex-start-left-column, header {
+.flex-center-column, .flex-center-row, .contour, .flex-space-between-row, .flex-start-left-column, header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10,7 +10,7 @@
           justify-content: center;
 }
 
-.border-shadow, .order-helper {
+.contour {
   border-radius: 20px;
   -webkit-box-shadow: 10px 10px 10px #ddd;
           box-shadow: 10px 10px 10px #ddd;
@@ -34,14 +34,14 @@ body {
           box-shadow: 1px 1px 10px #aaa;
 }
 
-.flex-center-column, .intro, img {
+.flex-center-column {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
 
-.flex-center-row, nav, .order-helper, .cards {
+.flex-center-row, .contour {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -65,13 +65,27 @@ body {
           flex-direction: column;
 }
 
-header {
-  padding: 0, 5em;
-  background-color: white;
-  border-bottom: 1px solid;
-  -webkit-box-shadow: 0 1px #eee;
-          box-shadow: 0 1px #eee;
-  height: 3em;
+.menu-header {
+  width: 100%;
+  height: 30vh;
+  background: url("/images/restaurants/alafrancaise.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.horizontal-separator {
+  position: relative;
+}
+
+.horizontal-separator:after {
+  content: "";
+  position: absolute;
+  top: 0.3em;
+  left: 0;
+  width: 2.5em;
+  height: 1em;
+  border-bottom: 0.3em solid #99e2d0;
 }
 
 header img {
@@ -79,83 +93,25 @@ header img {
   height: 30px;
 }
 
-nav {
-  background-color: #ddd;
-  gap: 1em;
+section {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-top: -1em;
+  background-color: #fff;
+  padding: 1em 2em;
 }
 
 h2 {
-  color: black;
-  font-size: 28px;
+  margin-top: 0;
 }
 
-.intro {
-  background-color: #eee;
-  height: 285px;
-  padding: 0 2em;
-  text-align: center;
-}
-
-.intro p {
-  font-size: 20px;
-}
-
-.order-helper {
-  gap: 1em;
-  width: 70vw;
-  margin: 1em 0;
-  position: relative;
-}
-
-.order-helper p:nth-child(1) {
-  position: absolute;
-  left: -10px;
-  color: white;
-  padding: 2px 6px;
-  border-radius: 20px;
-  background-color: #9356dc;
-}
-
-.border-shadow {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 5em;
-  margin: 1em;
-}
-
-img {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
-  -webkit-box-shadow: 10px 10px 10px #ddd;
-          box-shadow: 10px 10px 10px #ddd;
-}
-
-.background {
-  background-color: #eee;
-}
-
-.card h2,
-.card p {
-  padding: 0;
-  margin: 0;
+.contour {
+  background-color: white;
+  scroll-padding-top: 5em;
 }
 
 .fond {
   background-color: #333;
   color: #fff;
 }
-
-.cards {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 3em;
-}
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=menu.css.map */

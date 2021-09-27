@@ -1,20 +1,8 @@
 @import "./Sass/helpers/variables";
 @import "./Sass/helpers/placeholders";
-html,
-body {
-  font-family: Roboto;
-  margin: 0;
-  padding: 0;
-}
-.flex-center-column {
-  @extend %flex-center;
-  flex-direction: column;
-}
-.flex-center-row {
-  @extend %flex-center;
-
-  flex-direction: row;
-}
+@import "./Sass/helpers/reset";
+@import "./Sass/components/button";
+@import "./Sass/layout/flex";
 
 header {
   @extend %flex-center;
@@ -104,14 +92,3 @@ img {
 }
 
 //*MENU 1*//
-
-.bloc {
-  border-radius: 20px;
-  background-color: white;
-  bo
-}
-.underline {
-  text-decoration-color: rgb(173, 216, 230);
-  text-decoration-line: underline;
-  text-decoration-style: solid;
-}
