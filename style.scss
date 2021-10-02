@@ -3,19 +3,9 @@
 @import "./Sass/helpers/reset";
 @import "./Sass/components/button";
 @import "./Sass/layout/flex";
+@import "./Sass/layout/header";
+@import "./Sass/layout/footer";
 
-header {
-  @extend %flex-center;
-  padding: 0, 5em;
-  background-color: white;
-  border-bottom: 1px solid;
-  box-shadow: 0 1px #eee; // ne fonctionne pas, à fixer
-  height: 3em;
-  & img {
-    width: 150px;
-    height: 30px;
-  }
-}
 nav {
   @extend .flex-center-row;
   background-color: #ddd;
@@ -81,10 +71,6 @@ img {
   }
 }
 
-.fond {
-  background-color: #333;
-  color: #fff;
-}
 .cards {
   @extend .flex-center-row;
   flex-wrap: wrap;

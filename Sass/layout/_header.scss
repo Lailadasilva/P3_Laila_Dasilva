@@ -1,0 +1,15 @@
+header {
+  @extend %flex-center;
+}
+
+header {
+  @extend %flex-center;
+  padding: 1em 0;
+  background-color: white;
+  border-bottom: 1px solid;
+
+  img {
+    width: 150px;
+    height: 30px;
+  }
+}
