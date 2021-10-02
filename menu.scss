@@ -47,10 +47,13 @@ h2 {
   @extend .flex-center-row;
   @extend %border-shadow;
   background-color: white;
-  :5em ;
+  width: 100%;
+  margin: 2em 0;
+  line-height: 0.2em;
 }
 
 .fond {
   background-color: #333;
   color: #fff;
+  height: 100%;
 }
