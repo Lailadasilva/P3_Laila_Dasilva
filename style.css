@@ -1,4 +1,4 @@
-.flex-center-column, .intro, img, .flex-center-row, nav, .order-helper, .cards, .flex-space-between-row, .flex-start-left-column, header {
+.flex-center-column, .intro, .card img, .flex-center-row, nav, .order-helper, .cards, .flex-space-between-row, .flex-start-left-column, header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -26,7 +26,7 @@ body {
 
 .button {
   padding: 1em 2em;
-  border-radius: 25px;
+  border-radius: 50px;
   border-color: #9356dc;
   color: #fff;
   background: linear-gradient(170deg, #ff79da, #9356dc);
@@ -34,7 +34,7 @@ body {
           box-shadow: 1px 1px 10px #aaa;
 }
 
-.flex-center-column, .intro, img {
+.flex-center-column, .intro, .card img {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -156,7 +156,11 @@ h2 {
   margin: 1em;
 }
 
-img {
+.background {
+  background-color: #eee;
+}
+
+.card img {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   -webkit-box-flex: 2;
@@ -164,10 +168,6 @@ img {
           flex: 2;
   -webkit-box-shadow: 10px 10px 10px #ddd;
           box-shadow: 10px 10px 10px #ddd;
-}
-
-.background {
-  background-color: #eee;
 }
 
 .card h2,

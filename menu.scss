@@ -32,18 +32,46 @@ section {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   margin-top: -1em;
-  background-color: #fff;
+  background-color: rgb(253, 253, 253);
   padding: 1em 2em;
 }
 h2 {
   margin-top: 0;
 }
 
-.contour {
+.article {
   @extend .flex-center-row;
-  @extend %border-shadow;
+  border-radius: 20px;
+  box-shadow: 0 0 20px 2px #ddd;
   background-color: white;
   width: 100%;
   margin: 2em 0;
-  line-height: 0.2em;
+
+  .article-descritpion {
+    flex: 1;
+    justify-content: space-between;
+    display: flex;
+    margin: 0 1em;
+
+    div {
+      width: 80% h3, p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+    .price {
+      align-self: flex-end;
+    }
+  }
+}
+
+.order-section {
+  @extend .flex-center-row;
+  padding-top: 2em;
+  padding-bottom: 3em;
+  button {
+    width: 70%;
+    font-size: 1.2em;
+  }
 }

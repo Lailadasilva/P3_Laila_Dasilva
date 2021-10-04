@@ -53,17 +53,17 @@ h2 {
   margin: 1em;
 }
 
-img {
-  @extend .flex-center-column;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  flex: 2;
-  box-shadow: 10px 10px 10px #ddd;
-}
 .background {
   background-color: #eee;
 }
 .card {
+  img {
+    @extend .flex-center-column;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    flex: 2;
+    box-shadow: 10px 10px 10px #ddd;
+  }
   h2,
   p {
     padding: 0;

@@ -1,4 +1,4 @@
-.flex-center-column, .flex-center-row, .contour, .flex-space-between-row, .flex-start-left-column, header {
+.flex-center-column, .flex-center-row, .article, .order-section, .flex-space-between-row, .flex-start-left-column, header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10,13 +10,6 @@
           justify-content: center;
 }
 
-.contour {
-  border-radius: 20px;
-  -webkit-box-shadow: 10px 10px 10px #ddd;
-          box-shadow: 10px 10px 10px #ddd;
-  border: 1px solid white;
-}
-
 html,
 body {
   font-family: Roboto;
@@ -26,7 +19,7 @@ body {
 
 .button {
   padding: 1em 2em;
-  border-radius: 25px;
+  border-radius: 50px;
   border-color: #9356dc;
   color: #fff;
   background: linear-gradient(170deg, #ff79da, #9356dc);
@@ -41,7 +34,7 @@ body {
           flex-direction: column;
 }
 
-.flex-center-row, .contour {
+.flex-center-row, .article, .order-section {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -134,7 +127,7 @@ section {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   margin-top: -1em;
-  background-color: #fff;
+  background-color: #fdfdfd;
   padding: 1em 2em;
 }
 
@@ -142,10 +135,47 @@ h2 {
   margin-top: 0;
 }
 
-.contour {
+.article {
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 20px 2px #ddd;
+          box-shadow: 0 0 20px 2px #ddd;
   background-color: white;
   width: 100%;
   margin: 2em 0;
-  line-height: 0.2em;
+}
+
+.article .article-descritpion {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 1em;
+}
+
+.article .article-descritpion div {
+  width: 80% h3, p;
+  width-white-space: nowrap;
+  width-overflow: hidden;
+  width-text-overflow: ellipsis;
+}
+
+.article .article-descritpion .price {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.order-section {
+  padding-top: 2em;
+  padding-bottom: 3em;
+}
+
+.order-section button {
+  width: 70%;
+  font-size: 1.2em;
 }
 /*# sourceMappingURL=menu.css.map */
