@@ -56,25 +56,51 @@ h2 {
 .background {
   background-color: #eee;
 }
+
+.cards {
+  @extend .flex-center-row;
+  flex-wrap: wrap;
+  gap: 3em;
+  padding: 0 0.5em;
+  margin-bottom: 5em;
+}
 .card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px #ddd;
+  padding-bottom: 1em;
+  text-decoration: none;
+  color: black;
+
+  &:visited,
+  &:focus,
+  &:active,
+  &:hover {
+    text-decoration: none;
+    color: black;
+  }
+
+  .image-container,
+  .description {
+    flex: 1;
+  }
+  .description {
+    @extend .flex-space-between-row;
+  }
   img {
-    @extend .flex-center-column;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    flex: 2;
-    box-shadow: 10px 10px 10px #ddd;
+
+    min-height: 300px;
+    width: 100%;
   }
   h2,
   p {
     padding: 0;
     margin: 0;
   }
-}
-
-.cards {
-  @extend .flex-center-row;
-  flex-wrap: wrap;
-  gap: 3em;
 }
 
 //*MENU 1*//
