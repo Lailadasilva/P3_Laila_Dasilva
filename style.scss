@@ -82,7 +82,19 @@ h2 {
     color: black;
   }
 
-  .image-container,
+  .image-container {
+    flex: 1;
+    position: relative;
+
+    .tag {
+      position: absolute;
+      top: 10%;
+      right: 10%;
+      color: rgb(2, 71, 2);
+      background-color: $tertiary-color;
+      padding: 0.5em 1.5em;
+    }
+  }
   .description {
     flex: 1;
   }
