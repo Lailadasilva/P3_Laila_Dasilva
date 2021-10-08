@@ -128,7 +128,7 @@ section {
   border-top-right-radius: 20px;
   margin-top: -1em;
   background-color: #fdfdfd;
-  padding: 1em 2em;
+  padding: 1em 0.5em;
 }
 
 h2 {
@@ -144,7 +144,7 @@ h2 {
   margin: 2em 0;
 }
 
-.article .article-descritpion {
+.article .article-description {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -154,17 +154,31 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 1em;
+  margin: 0 0.5em;
 }
 
-.article .article-descritpion div {
-  width: 80% h3, p;
-  width-white-space: nowrap;
-  width-overflow: hidden;
-  width-text-overflow: ellipsis;
+.article .article-description div {
+  width: 70%;
 }
 
-.article .article-descritpion .price {
+.article .article-description div h3,
+.article .article-description div p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.article .article-description h3 {
+  margin-top: 0.6em;
+  margin-bottom: 0.2em;
+}
+
+.article .article-description p {
+  margin-top: 0.2em;
+  margin-bottom: 0.6em;
+}
+
+.article .article-description .price {
   -ms-flex-item-align: end;
       align-self: flex-end;
 }

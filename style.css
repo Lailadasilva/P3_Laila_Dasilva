@@ -1,4 +1,4 @@
-.flex-center-column, .intro, .card img, .flex-center-row, nav, .order-helper, .cards, .flex-space-between-row, .flex-start-left-column, header {
+.flex-center-column, .intro, .flex-center-row, nav, .order-helper, .cards, .flex-space-between-row, .card .description, .flex-start-left-column, header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,7 +34,7 @@ body {
           box-shadow: 1px 1px 10px #aaa;
 }
 
-.flex-center-column, .intro, .card img {
+.flex-center-column, .intro {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -48,7 +48,7 @@ body {
           flex-direction: row;
 }
 
-.flex-space-between-row {
+.flex-space-between-row, .card .description {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -160,25 +160,53 @@ h2 {
   background-color: #eee;
 }
 
+.cards {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 3em;
+  padding: 0 0.5em;
+  margin-bottom: 5em;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  border-radius: 20px;
+  -webkit-box-shadow: 10px 10px 10px #ddd;
+          box-shadow: 10px 10px 10px #ddd;
+  padding-bottom: 1em;
+  text-decoration: none;
+  color: black;
+}
+
+.card:visited, .card:focus, .card:active, .card:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.card .image-container,
+.card .description {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
 .card img {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
-  -webkit-box-shadow: 10px 10px 10px #ddd;
-          box-shadow: 10px 10px 10px #ddd;
+  min-height: 300px;
+  width: 100%;
 }
 
 .card h2,
 .card p {
   padding: 0;
   margin: 0;
-}
-
-.cards {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 3em;
 }
 /*# sourceMappingURL=style.css.map */
