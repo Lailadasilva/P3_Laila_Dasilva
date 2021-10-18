@@ -52,6 +52,8 @@ h2 {
     justify-content: space-between;
     display: flex;
     margin: 0 0.5em;
+    transition-property: transform;
+    transition: transform 5s;
 
     div {
       width: 70%;
