@@ -5,6 +5,7 @@
 @import "./Sass/layout/flex";
 @import "./Sass/layout/header";
 @import "./Sass/layout/footer";
+@import "./Sass/layout/loader";
 
 nav {
   @extend .flex-center-row;
