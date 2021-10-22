@@ -1,3 +1,4 @@
+$loader-display-time: 5s;
 html,
 body {
   margin: 0;
@@ -5,6 +6,7 @@ body {
   overflow: hidden;
 }
 .loader {
+  visibility: hidden;
   position: absolute;
   height: 100vh;
   width: 100vw;
@@ -13,13 +15,16 @@ body {
   align-items: center;
   background-color: white;
   z-index: 1;
+  //animation pour me temps d'affichage
+  animation-name: disappear;
+  animation-duration: $loader-display-time;
 
   .square {
     width: 100px;
     height: 100px;
     background-color: $primary-color;
     animation-name: change-color;
-    animation-duration: 4s;
+    animation-duration: 3s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
@@ -34,5 +39,30 @@ body {
   }
   100% {
     background-color: $secondary-color;
+  }
+}
+@keyframes diappear {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
+  }
+}
+@keyframes disable-controls {
+  0% {
+    margin: 0%;
+    height: 100%;
+    overflow: hidden;
+  }
+  99% {
+    margin: 0%;
+    height: 100%;
+    overflow: hidden;
+  }
+  100% {
+    margin: auto;
+    height: auto;
+    overflow: auto;
   }
 }
