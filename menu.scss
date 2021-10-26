@@ -8,6 +8,8 @@
 @import "./Sass/layout/footer";
 @import "./Sass/layout/loader";
 
+$item-border-radius: 20px;
+
 .menu-header {
   width: 100%;
   height: 30vh;
@@ -30,8 +32,8 @@
 }
 
 section {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-top-left-radius: $item-border-radius;
+  border-top-right-radius: $item-border-radius;
   margin-top: -1em;
   background-color: rgb(253, 253, 253);
   padding: 1em 0.5em;
@@ -47,6 +49,27 @@ h2 {
   background-color: white;
   width: 100%;
   margin: 2em 0;
+
+  &:hover {
+    .article-selection {
+      width: 75px;
+      transition: width 1s;
+      i {
+        z-index: 1;
+        transform: rotate(0deg);
+        transition: transform 1s width 1s;
+      }
+    }
+  }
+  .article-selection {
+    width: 0;
+    transition: width 1s;
+    i {
+      transform: rotate(180deg);
+      z-index: -1;
+      transition: z-index 1s, transform 1s;
+    }
+  }
 
   .article-description {
     flex: 1;
@@ -86,5 +109,47 @@ h2 {
   button {
     width: 70%;
     font-size: 1.2em;
+  }
+}
+.article-selection {
+  @extend %flex-center;
+  background-color: $tertiary-color;
+  border-top-right-radius: $item-border-radius;
+  border-bottom-right-radius: $item-border-radius;
+  width: 75px;
+  height: 75px;
+
+  animation-name: grow-width;
+  animation-duration: 1s;
+
+  i {
+    color: white;
+    font-size: 36px;
+    animation-name: check-circle-rotation;
+    animation-duration: 1s;
+  }
+}
+.favorite-icon {
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+    i.fas {
+      visibility: visible;
+      color: transparent;
+      background-clip: text;
+      background-image: linear-gradient(
+        to bottom,
+        $secondary-color,
+        $primary-color
+      );
+    }
+  }
+  i {
+    &.fas {
+      position: absolute;
+      left: 0;
+      visibility: hidden;
+    }
   }
 }

@@ -1,4 +1,4 @@
-.flex-center-column, .flex-center-row, .article, .order-section, .flex-space-between-row, .flex-start-left-column, header {
+.flex-center-column, .flex-center-row, .article, .order-section, .flex-space-between-row, .flex-start-left-column, header, .article-selection {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -267,6 +267,38 @@ h2 {
   margin: 2em 0;
 }
 
+.article:hover .article-selection {
+  width: 75px;
+  -webkit-transition: width 1s;
+  transition: width 1s;
+}
+
+.article:hover .article-selection i {
+  z-index: 1;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: -webkit-transform 1s width 1s;
+  transition: -webkit-transform 1s width 1s;
+  transition: transform 1s width 1s;
+  transition: transform 1s width 1s, -webkit-transform 1s width 1s;
+}
+
+.article .article-selection {
+  width: 0;
+  -webkit-transition: width 1s;
+  transition: width 1s;
+}
+
+.article .article-selection i {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  z-index: -1;
+  -webkit-transition: z-index 1s, -webkit-transform 1s;
+  transition: z-index 1s, -webkit-transform 1s;
+  transition: z-index 1s, transform 1s;
+  transition: z-index 1s, transform 1s, -webkit-transform 1s;
+}
+
 .article .article-description {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -322,5 +354,48 @@ h2 {
 .order-section button {
   width: 70%;
   font-size: 1.2em;
+}
+
+.article-selection {
+  background-color: #99e2d0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 75px;
+  height: 75px;
+  -webkit-animation-name: grow-width;
+          animation-name: grow-width;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.article-selection i {
+  color: white;
+  font-size: 36px;
+  -webkit-animation-name: check-circle-rotation;
+          animation-name: check-circle-rotation;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.favorite-icon {
+  position: relative;
+}
+
+.favorite-icon:hover {
+  cursor: pointer;
+}
+
+.favorite-icon:hover i.fas {
+  visibility: visible;
+  color: transparent;
+  background-clip: text;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background-image: linear-gradient(to bottom, #ff79da, #9356dc);
+}
+
+.favorite-icon i.fas {
+  position: absolute;
+  left: 0;
+  visibility: hidden;
 }
 /*# sourceMappingURL=menu.css.map */
